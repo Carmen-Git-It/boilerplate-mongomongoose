@@ -21,7 +21,7 @@ const personSchema = new Schema({
   }]
 });
 
-let Person;
+let Person = mongoose.model('Person', personSchema);
 
 const createAndSavePerson = (done) => {
   done(null /*, data*/);
@@ -70,6 +70,8 @@ const queryChain = (done) => {
 
   done(null /*, data*/);
 };
+
+
 
 /** **Well Done !!**
 /* You completed these challenges, let's go celebrate !
