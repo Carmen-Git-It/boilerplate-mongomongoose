@@ -8,17 +8,10 @@ const Schema = mongoose.Schema;
 const personSchema = new Schema({
   name: {
     type: String,
-    required: true,
-    default: "Kevin J"
+    required: true
   },
-  age: {
-    type: Number,
-    default: 18
-  },
-  favouriteFoods: [{
-    type: String,
-    default: "hot dogs"
-  }]
+  age: Number,
+  favouriteFoods: [ String ]
 });
 
 const Person = mongoose.model("Person", personSchema);
