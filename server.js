@@ -80,6 +80,7 @@ router.post("/mongoose-model", function (req, res, next) {
   p = new Person(req.body);
   res.json(p);
   console.log(p);
+  console.log(req.body);
 });
 
 const createPerson = require("./myApp.js").createAndSavePerson;
