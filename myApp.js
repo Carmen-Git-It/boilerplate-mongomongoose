@@ -3,6 +3,23 @@ var mongoose = require('mongoose');
 
 mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopology: true});
 
+const {Schema} = mongoose;
+
+const personSchema = new Schema({
+  name: {
+    type: String,
+    required: true,
+    default: "Kevin J"
+  },
+  age: {
+    type: Number,
+    default: 18
+  },
+  favouriteFoods: [{
+    type: String,
+    default: "hot dogs"
+  }]
+});
 
 let Person;
 
